@@ -1,0 +1,5 @@
+{
+  "latest_version": "v1.0.0",
+  "linux_installer_url": "https://drive.google.com/uc?export=download&id=YOUR_GOOGLE_DRIVE_FILE_ID",
+  "release_notes": "Initial RookAI Alpha release loop. Optimized local FastAPI daemon, hardened JSON error contracts, and implemented offline version cache safety layers for Linux environments."
+}
