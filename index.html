@@ -1,206 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RookAI // Endpoint Behavioral Heuristics Engine</title>
-    <meta name="description" content="Next-gen AI anti-virus engine and visual threat dashboard that analyzes process telemetry streams using an isolated Docker deep learning core." />
+    <meta name="description" content="Next-gen AI anti-virus engine and visual threat dashboard analyzing process telemetry streams." />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="assets/logo.png" />
-  </head>
-  <body>
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
     <div class="bg">
-      <div class="glow g1"></div>
-      <div class="glow g2"></div>
-      <div class="grid"></div>
+        <div class="glow g1"></div>
+        <div class="glow g2"></div>
+        <div class="grid"></div>
     </div>
 
     <header class="container header">
-      <a class="brand" href="#">
-        <img class="brand-logo" src="assets/logo.png" alt="RookAI logo" onerror="this.style.display='none'" />
-        <div class="brand-text">
-          <div class="brand-name">ROOKAI</div>
-          <div class="brand-tag">An MLIB Suite • Meir Technologies</div>
-        </div>
-      </a>
-      <nav class="nav">
-        <a href="#overview">Overview</a>
-        <a href="#installation">Deployment</a>
-        <a href="https://mlib.app">MLIB Hub</a>
-        <a href="https://github.com/Ryuu-Naisho/rookai-app/releases/download/v1.0.0/rookai-linux-alpha.tar.gz" class="btn btn-ghost">Download Engine</a>
-      </nav>
+        <a class="brand" href="#">
+            <img src="assets/icon.png" alt="RookAI Logo" class="brand-logo" onerror="this.style.display='none'" />
+            <div class="brand-text">
+                <div class="brand-name">RookAI</div>
+                <div class="brand-tag">An MLIB Suite • Meir Technologies</div>
+            </div>
+        </a>
+        <nav class="nav">
+            <a href="#overview">Overview</a>
+            <a href="#interface-showcase">Engine UI</a>
+            <a href="#installation">Deployment</a>
+            <a href="https://mlib.app" class="nav-link-secondary" target="_blank">MLIB Hub</a>
+            <a href="https://github.com/Ryuu-Naisho/RookAI/releases/download/v1.0.0/rookai-linux-alpha.tar.gz" class="btn btn-ghost">Download Engine</a>
+        </nav>
     </header>
 
     <main>
-      <section class="container hero">
-        <div class="hero-left">
-          <div class="pill">
-            <span class="dot"></span> Optimized for Linux (Ubuntu / Pop!_OS Ecosystems)
-          </div>
-          <p class="sub">
-            RookAI is a next-generation endpoint behavioral protection client built to evaluate process telemetry streams against localized neural models. By shifting heavy ML evaluation layers into isolated runtimes, your host environment stays fast and clean.
-          </p>
-          <div class="cta">
-            <a class="btn btn-primary" href="https://github.com/Ryuu-Naisho/rookai-app/releases/download/v1.0.0/rookai-linux-alpha.tar.gz">Download RookAI Community Edition</a>
-            <a class="btn btn-secondary" href="#installation">View Deployment Guide</a>
-          </div>
-          <div class="trust">
-            <div class="trust-item">
-              <div class="trust-number">Linux Native</div>
-              <div class="trust-label">Hardened for systemd & kernels</div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-number">PyQt6 UI</div>
-              <div class="trust-label">Sci-fi terminal interface</div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-number">Decoupled</div>
-              <div class="trust-label">No local dependency bloat</div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-right">
-          <div class="card big">
-            <div class="card-top">
-              <div class="status">
-                <span class="status-dot"></span> Core Engine Active
-              </div>
-              <div class="badge">Linux x86_64</div>
-            </div>
-            <div class="metrics">
-              <div class="metric">
-                <div class="metric-title">Telemetry Stream Classification</div>
-                <div class="metric-value">Isolated Model Evaluation</div>
-                <div class="bar"><span style="width: 96%"></span></div>
-              </div>
-              <div class="metric">
-                <div class="metric-title">Process Intercept Accuracy</div>
-                <div class="metric-value">Graph-Model Framework</div>
-                <div class="bar"><span style="width: 92%"></span></div>
-              </div>
-            </div>
-            <div class="terminal">
-              <div class="terminal-head">
-                <span></span><span></span><span></span>
-                <div class="terminal-title">rookai --gui</div>
-              </div>
-              <pre class="terminal-body"><code>$ rookai
->> INITIALIZING CONTAINERIZED NEURAL COGNITION CORES...
->> [PID 1027] ALERT: DIVERGENT BEHAVIORAL SEQUENCE DETECTED 🚨 EXPLOIT TARGET MATRIX ISOLATED // KERNEL INSTRUCTION BLOCKED</code></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="overview" class="container section">
-        <div class="section-head">
-          <h2>System Capabilities</h2>
-          <p>How RookAI bypasses dependency conflicts while maintaining deep diagnostic depth.</p>
-        </div>
-        <div class="grid3">
-          <div class="card">
-            <h3>Decoupled Inference</h3>
-            <p>The heavy TensorFlow backend environment and pre-trained SavedModel weights run safely containerized, eliminating driver fragmentation entirely.</p>
-            <ul class="list">
-              <li>Zero host ML footprint</li>
-              <li>Immutable execution stack</li>
-              <li>Isolated process bounds</li>
-            </ul>
-          </div>
-          <div class="card" style="border: 1px solid #00ffcc; background: linear-gradient(180deg, rgba(0,255,170,.03), transparent);">
-            <h3>Dual Operational Modes</h3>
-            <p>Run via the interactive ANSI-colored terminal dashboard for fast server administration, or initialize the rich PyQt6 desktop layout for deep monitoring visualization.</p>
-            <ul class="list">
-              <li>Asynchronous QThread tasks</li>
-              <li>Real-time progress trackers</li>
-              <li>Dynamic UI alert triggers</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Session Reporting</h3>
-            <p>Managed directly via the integrated local logging framework to generate secure, standardized markdown summaries without external database tracking dependencies.</p>
-            <ul class="list">
-              <li>Automated session caching</li>
-              <li>Local history purging</li>
-              <li>Local markdown exports</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="installation" class="container section">
-        <div class="section-head">
-          <h2>Quick Start Deployment</h2>
-          <p>Deploy the production binary environment and initialize your local client interface.</p>
-        </div>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">01</div>
-            <div class="step-body">
-              <h3>Extract the Distribution Package</h3>
-              <p>Download and extract the compiled deployment tarball to initialize the platform environment files:</p>
-              <div class="terminal" style="margin-top: 10px; max-width: 650px;">
-                <pre class="terminal-body"><code>tar -xzvf rookai-linux-alpha.tar.gz
-cd rookai-linux-alpha</code></pre>
-              </div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">02</div>
-            <div class="step-body">
-              <h3>Execute the Automated Installer</h3>
-              <p>Run the secure installation utility framework to verify system core prerequisites, build your localized background processing network, and register the global app hooks:</p>
-              <div class="terminal" style="margin-top: 10px; max-width: 650px;">
-                <pre class="terminal-body"><code>chmod +x install.sh
-./install.sh</code></pre>
-              </div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">03</div>
-            <div class="step-body">
-              <h3>Boot the Security Console</h3>
-              <p>Launch the asynchronous desktop threat visualization suite or standard terminal audit controls instantly from your local environment path tracks:</p>
-              <div class="terminal" style="margin-top: 10px; max-width: 650px;">
-                <pre class="terminal-body"><code>rookai</code></pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="container section">
-        <div class="contact-card">
-          <div>
-            <h2>Explore the Corporate Ecosystem</h2>
-            <p>
-              RookAI is a signature security tool maintained by Meir Technologies. Inspect deployment logs via our centralized architectures or access commercial monitoring licensing layers.
+        <section class="container hero">
+            <div class="badge">ALPHA RELEASE // V1.0.0</div>
+            <h1>Real-Time Endpoint Behavioral Heuristics</h1>
+            <p class="hero-subtitle">
+                An open-source, behavioral anti-virus and process telemetry analysis engine. RookAI monitors host execution layers, identifies multi-stage anomalies, and isolates threats with low-level kernel containment.
             </p>
-            <div class="contact-pills">
-              <span class="mini-pill">Community Edition Release</span>
-              <span class="mini-pill">Meir Technologies Engine</span>
-              <span class="mini-pill">Secure Telemetry Framework</span>
+            <div class="cta-group">
+                <a href="https://github.com/Ryuu-Naisho/RookAI/releases/download/v1.0.0/rookai-linux-alpha.tar.gz" class="btn btn-primary">Download Linux Alpha (.tar.gz)</a>
+                <a href="#installation" class="btn btn-secondary">View Deployment Matrix</a>
             </div>
-          </div>
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="https://github.com/Ryuu-Naisho/rookai-app/releases/download/v1.0.0/rookai-linux-alpha.tar.gz">Download Community Edition</a>
-            <a class="btn btn-secondary" href="https://mlib.app">Visit MLIB.app Hub</a>
-            <div class="small-note">Ensure your host machine has a running Docker daemon configuration prior to executing the installer.</div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <section id="interface-showcase" class="showcase-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">TELEMETRY INTERFACE</span>
+                    <h2>Heuristics Engine In Action</h2>
+                    <p>Observe real-time process monitoring and localized containment working alongside your running background inference daemon.</p>
+                </div>
+                
+                <div class="screenshot-grid">
+                    <div class="screenshot-card">
+                        <div class="card-terminal-header">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                            <span class="title">diagnostic_scan.log</span>
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="assets/Scan_In_Progress.png" alt="RookAI Real-Time Telemetry Scanner" class="app-screenshot" />
+                        </div>
+                        <div class="card-meta">
+                            <h3>Active Diagnostic Track</h3>
+                            <p>Continuous validation loops parsing active PIDs against localized neural models.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="screenshot-card valid-alert">
+                        <div class="card-terminal-header">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                            <span class="title">mitigation_response.log</span>
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="assets/Anomalous_Activity_Detected.png" alt="RookAI Behavioral Heuristics Mitigation" class="app-screenshot" />
+                        </div>
+                        <div class="card-meta">
+                            <h3>Automated Containment Tier</h3>
+                            <p>Dynamic detection signature triggering low-level process freezing before execution faults persist.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="container features">
+            <div class="feature-card">
+                <div class="icon-glow">⚡</div>
+                <h3>Process Telemetry Analysis</h3>
+                <p>Monitors runtime signatures, process lifecycles, and anomalous memory hooks via high-performance pipelines.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-glow">🛡️</div>
+                <h3>Behavioral Anti-Virus</h3>
+                <p>Moves past traditional static hashes. RookAI evaluates active system execution trees to catch novel zero-day mechanics.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-glow">🤖</div>
+                <h3>Localized Inference Layer</h3>
+                <p>Runs neural models locally inside a secure container footprint, preserving extreme privacy and host independence.</p>
+            </div>
+        </section>
+
+        <section id="installation" class="container installation-box">
+            <div class="section-header">
+                <span class="section-tag">ARCHITECTURE DEPLOYMENT</span>
+                <h2>Turnkey Installation Track</h2>
+                <p>Deploy the inference backend daemon and the PyQt6 frontend engine natively on your system.</p>
+            </div>
+
+            <div class="terminal-container">
+                <div class="terminal-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="title">bash — automated_installer.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="comment"># 1. Extract the release package package distribution</p>
+                    <p><span class="prompt">$</span> tar -xzvf rookai-linux-alpha.tar.gz</p>
+                    <p><span class="prompt">$</span> cd rookai-linux-alpha</p>
+                    <br>
+                    <p class="comment"># 2. Fire up the automated container and environment initialization script</p>
+                    <p><span class="prompt">$</span> chmod +x install.sh && ./install.sh</p>
+                    <br>
+                    <p class="comment"># 3. Launch the visual operational platform interface</p>
+                    <p><span class="prompt">$</span> rookai</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="container footer">
-      <div>© <span id="year"></span> Meir Technologies. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="https://meirtechnologies.com" target="_blank">meir-technologies.com</a>
-        <a href="https://mlib.app">mlib.app</a>
-      </div>
+    <footer class="container footer-meta">
+        <p>&copy; 2026 Meir Technologies. All rights reserved. RookAI is distributed under open-source compliance guidelines.</p>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+</body>
 </html>
